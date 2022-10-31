@@ -1,0 +1,16 @@
+==> 2022-10-31 23:41:03 <==
+# cmd: C:\Users\acer\anaconda3\Scripts\conda-script.py create -p denv python==3.9 -y
+# conda version: 22.9.0
++defaults/noarch::tzdata-2022e-h04d1e81_0
++defaults/noarch::wheel-0.37.1-pyhd3eb1b0_0
++defaults/win-64::ca-certificates-2022.10.11-haa95532_0
++defaults/win-64::certifi-2022.9.24-py39haa95532_0
++defaults/win-64::openssl-1.1.1q-h2bbff1b_0
++defaults/win-64::pip-22.2.2-py39haa95532_0
++defaults/win-64::python-3.9.0-h6244533_2
++defaults/win-64::setuptools-65.5.0-py39haa95532_0
++defaults/win-64::sqlite-3.39.3-h2bbff1b_0
++defaults/win-64::vc-14.2-h21ff451_1
++defaults/win-64::vs2015_runtime-14.27.29016-h5e58377_2
++defaults/win-64::wincertstore-0.2-py39haa95532_2
+# update specs: ['python==3.9']
