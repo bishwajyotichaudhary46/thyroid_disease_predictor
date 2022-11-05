@@ -1,29 +1,91 @@
 <!DOCTYPE html>
+
 <html >
 
 <head>
  <meta charset="UTF-8">
 <title>Thyroid Prediction</title>
- 
+
+<style>
+  body
+  {
+    background-color: aqua;
+  }
+  table{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ th{
+  margin-top: 10pt;
+ }
+
+  
+nav {
+  float: top;
+  width: 100%;
+  height: 50px; /* only for demonstration, should be removed */
+  
+  
+}
+</style>
+<nav style="background-color:#5cb85c">
+  <h1 style="text-align:center; color: white;margin-top: -0%;">Thyroid Disease Predictor</h1>
+
+</nav>
+
   
 </head>
 
-<body>
- <div >
-	<h1>Thyroid Disease Predictor</h1>
-
+<body >
+ <div style="color: rgb(4, 4, 4)">
+	
      <!-- Main Input For Receiving Query to our ML -->
-    <div>
+    <div style="text-align:center">
     <form action="{{ url_for('predict')}}"   method="post">
-       <input type="number" name="TT4" placeholder="TT4" id = "TT4"  step = "0.1" min = "2" max ="200" required="required" /><br>
+      <table>
+        <tr>
+        <th>
+       <label>TT4:</label>
+       <input type="number" name="TT4" placeholder="TT4" id = "TT4"  step = "0.1" min = "2" max ="200" required="required" size="10"/><br>
+      </th>
+      </tr>
+      <tr>
+        <th>
+       <label>FTI:</label>
        <input type="number" name="FTI" placeholder="FTI" id ="FTI" step = "0.1" min = "2" max ="200" required="required" /><br>
-        <input type="number" name="T3" placeholder="T3" id = "T3"  step = "0.001" min = "0" max ="12" required="required" /><br>
-        <input type="number" name="T4U" placeholder="T4U" id = "T4U" step = "0.0001" min = "0" max ="3" required="required" /><br>
-        <input type="number" name="age" placeholder="age"  id = "age" min = "1" max ="100"  required="required" /><br>
+      </th>
+      </tr>
+      <tr>
+        <th>
+       <label>T3:</label>
+       <input type="number" name="T3" placeholder="T3" id = "T3"  step = "0.001" min = "0" max ="12" required="required" /><br>
+      </th>
+      </tr>
+      <tr>
+        <th>
+       <label>T4U:</label>
+       <input type="number" name="T4U" placeholder="T4U" id = "T4U" step = "0.0001" min = "0" max ="3" required="required" /><br>
+      </th>
+      </tr>
+      <tr>
+          <th>
+      
+       <label>Gender:</label>
+        <input type="number" name="age" placeholder="age"  id = "age" min = "1" max ="100"  required="required" checked /><br>
         <input type="radio" name="sex" value="1"/>Males
         <input type="radio" name="sex" value="0"/>Female
       <br>
+    </th>
+    </tr>
+    <tr>
+      <th>
+
       <button type="submit" >Predict</button>
+    </th>
+    </tr>
+
+    </table>
     </form>
 
 
@@ -40,7 +102,11 @@
   
    
  </div>
- <h1>{{prediction_text}}</h1>
+ <div style="text-align:center">
+  <h1 style="color:white">{{prediction_text}}</h1>
+  <a href="https://www.w3schools.com/">Go to Home Page</a>
 
+ </div>
+ 
 </body>
 </html>

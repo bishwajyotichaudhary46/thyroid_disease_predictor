@@ -36,7 +36,7 @@ def predict():
         disease = "Primary Hypothyroid ! Take Care"
     elif output == 3:
         disease = "Secondary Hypothyroid ! Take Care"
-    return render_template("home.html",prediction_text = "You may have a{}".format(disease))
+    return render_template("home.html",prediction_text = "You may have a {}".format(disease))
 
 if __name__=="__main__":
     app.run(debug=True)
